@@ -42,6 +42,7 @@
             HomeButton1.TabIndex = 0;
             HomeButton1.Text = "Empezar";
             HomeButton1.UseVisualStyleBackColor = true;
+            HomeButton1.Click += HomeButton1_Click;
             // 
             // HomeLabel1
             // 
