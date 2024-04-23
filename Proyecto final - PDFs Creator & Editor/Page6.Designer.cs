@@ -42,7 +42,6 @@
             CreatePdfButton.TabIndex = 7;
             CreatePdfButton.Text = "Cerrar";
             CreatePdfButton.UseVisualStyleBackColor = true;
-            CreatePdfButton.Click += this.CreatePdfButton_Click;
             // 
             // Page3Label1
             // 

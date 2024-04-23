@@ -28,31 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            HomeButton1 = new Button();
+            HomeLabel1 = new Label();
+            HomeLabel2 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // HomeButton1
             // 
-            button1.Location = new Point(339, 171);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            HomeButton1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            HomeButton1.Location = new Point(311, 272);
+            HomeButton1.Name = "HomeButton1";
+            HomeButton1.Size = new Size(181, 55);
+            HomeButton1.TabIndex = 0;
+            HomeButton1.Text = "Empezar";
+            HomeButton1.UseVisualStyleBackColor = true;
+            // 
+            // HomeLabel1
+            // 
+            HomeLabel1.AutoSize = true;
+            HomeLabel1.Font = new Font("Showcard Gothic", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            HomeLabel1.Location = new Point(38, 87);
+            HomeLabel1.Name = "HomeLabel1";
+            HomeLabel1.Size = new Size(718, 60);
+            HomeLabel1.TabIndex = 1;
+            HomeLabel1.Text = "Bienvenido a PDF Magician";
+            // 
+            // HomeLabel2
+            // 
+            HomeLabel2.AutoSize = true;
+            HomeLabel2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            HomeLabel2.Location = new Point(60, 186);
+            HomeLabel2.Name = "HomeLabel2";
+            HomeLabel2.Size = new Size(668, 30);
+            HomeLabel2.TabIndex = 2;
+            HomeLabel2.Text = "Crea tus PDF, añade imágenes y contenid. O edita PDF ya existentes.";
             // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(HomeLabel2);
+            Controls.Add(HomeLabel1);
+            Controls.Add(HomeButton1);
             Name = "Home";
             Text = "Home";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
+        private Button HomeButton1;
+        private Label HomeLabel1;
+        private Label HomeLabel2;
     }
 }
