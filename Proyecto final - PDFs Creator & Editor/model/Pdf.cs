@@ -9,10 +9,10 @@ namespace Proyecto_final___PDFs_Creator___Editor.model
     internal class Pdf
     {
        
-        private int _id { get; }
-        private string _name { get; set; }
-        private DateOnly _lastModified {  get; set; }
-        private string _operationPerformed { get; set; };
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateOnly LastModified {  get; set; }
+        public string OperationPerformed { get; set; }
 
 
         public Pdf() { }
