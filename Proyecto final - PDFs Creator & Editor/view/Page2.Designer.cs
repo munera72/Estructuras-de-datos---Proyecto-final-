@@ -48,6 +48,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(dataGridView1);
             Name = "Page2";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Page2";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

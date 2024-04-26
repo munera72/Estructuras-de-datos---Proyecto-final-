@@ -16,8 +16,6 @@ namespace Proyecto_final___PDFs_Creator___Editor
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            PdfController controller = new PdfController();
-
             Application.Run(new Home());
 
 

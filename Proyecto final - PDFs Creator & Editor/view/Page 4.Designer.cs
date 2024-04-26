@@ -50,7 +50,6 @@
             Page4Label1.Size = new Size(240, 21);
             Page4Label1.TabIndex = 0;
             Page4Label1.Text = "Ingrese el título del contenido";
-            Page4Label1.Click += Page4Label1_Click;
             // 
             // Page4TextBox1
             // 
@@ -97,6 +96,7 @@
             Page4Button1.TabIndex = 5;
             Page4Button1.Text = "Añadir Imágen";
             Page4Button1.UseVisualStyleBackColor = true;
+            Page4Button1.Click += Page4Button1_Click;
             // 
             // Page4Button2
             // 
@@ -116,6 +116,7 @@
             Page4Button3.TabIndex = 7;
             Page4Button3.Text = "Guardar PDF";
             Page4Button3.UseVisualStyleBackColor = true;
+            Page4Button3.Click += Page4Button3_Click;
             // 
             // Page4Label3
             // 
@@ -126,7 +127,6 @@
             Page4Label3.Size = new Size(290, 17);
             Page4Label3.TabIndex = 8;
             Page4Label3.Text = "Añadir ruta de imagen o carpeta de imágenes";
-            Page4Label3.Click += label1_Click;
             // 
             // Page4
             // 

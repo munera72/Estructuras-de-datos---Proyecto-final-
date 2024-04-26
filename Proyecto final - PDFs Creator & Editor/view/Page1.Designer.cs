@@ -60,6 +60,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "Page1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Page1";
             ResumeLayout(false);
         }

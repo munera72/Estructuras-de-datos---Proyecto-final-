@@ -25,8 +25,10 @@ namespace Proyecto_final___PDFs_Creator___Editor
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Page4 f1 = new Page4();
+            Page3 f1 = new Page3();
             f1.Show();
+            this.Hide(); // Hide the current form
+
         }
     }
 }

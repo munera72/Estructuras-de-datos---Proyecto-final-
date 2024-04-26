@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             CreatePdfButton = new Button();
-            textBox1 = new TextBox();
+            Page5TextBox1 = new TextBox();
             Page3Label1 = new Label();
             SuspendLayout();
             // 
@@ -42,13 +42,14 @@
             CreatePdfButton.TabIndex = 5;
             CreatePdfButton.Text = "Aceptar";
             CreatePdfButton.UseVisualStyleBackColor = true;
+            CreatePdfButton.Click += CreatePdfButton_Click;
             // 
-            // textBox1
+            // Page5TextBox1
             // 
-            textBox1.Location = new Point(96, 181);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(609, 23);
-            textBox1.TabIndex = 4;
+            Page5TextBox1.Location = new Point(96, 181);
+            Page5TextBox1.Name = "Page5TextBox1";
+            Page5TextBox1.Size = new Size(609, 23);
+            Page5TextBox1.TabIndex = 4;
             // 
             // Page3Label1
             // 
@@ -66,11 +67,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(CreatePdfButton);
-            Controls.Add(textBox1);
+            Controls.Add(Page5TextBox1);
             Controls.Add(Page3Label1);
             Name = "Page5";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Page5_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -78,7 +79,7 @@
         #endregion
 
         private Button CreatePdfButton;
-        private TextBox textBox1;
+        private TextBox Page5TextBox1;
         private Label Page3Label1;
     }
 }

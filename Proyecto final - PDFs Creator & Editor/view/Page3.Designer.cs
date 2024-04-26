@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             Page3Label1 = new Label();
-            textBox1 = new TextBox();
+            Page3TextBox1 = new TextBox();
             CreatePdfButton = new Button();
             EditPdfButton = new Button();
             SuspendLayout();
@@ -44,12 +44,12 @@
             Page3Label1.TabIndex = 0;
             Page3Label1.Text = "Ingrese la ruta del archivo o de guardado para crear o editar su pdf";
             // 
-            // textBox1
+            // Page3TextBox1
             // 
-            textBox1.Location = new Point(93, 177);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(609, 23);
-            textBox1.TabIndex = 1;
+            Page3TextBox1.Location = new Point(93, 177);
+            Page3TextBox1.Name = "Page3TextBox1";
+            Page3TextBox1.Size = new Size(609, 23);
+            Page3TextBox1.TabIndex = 1;
             // 
             // CreatePdfButton
             // 
@@ -60,6 +60,7 @@
             CreatePdfButton.TabIndex = 2;
             CreatePdfButton.Text = "Crear PDF";
             CreatePdfButton.UseVisualStyleBackColor = true;
+            CreatePdfButton.Click += CreatePdfButton_Click;
             // 
             // EditPdfButton
             // 
@@ -70,6 +71,7 @@
             EditPdfButton.TabIndex = 3;
             EditPdfButton.Text = "Editar PDF";
             EditPdfButton.UseVisualStyleBackColor = true;
+            EditPdfButton.Click += EditPdfButton_Click;
             // 
             // Page3
             // 
@@ -78,9 +80,10 @@
             ClientSize = new Size(800, 450);
             Controls.Add(EditPdfButton);
             Controls.Add(CreatePdfButton);
-            Controls.Add(textBox1);
+            Controls.Add(Page3TextBox1);
             Controls.Add(Page3Label1);
             Name = "Page3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Page 3";
             ResumeLayout(false);
             PerformLayout();
@@ -89,7 +92,7 @@
         #endregion
 
         private Label Page3Label1;
-        private TextBox textBox1;
+        private TextBox Page3TextBox1;
         private Button CreatePdfButton;
         private Button EditPdfButton;
     }

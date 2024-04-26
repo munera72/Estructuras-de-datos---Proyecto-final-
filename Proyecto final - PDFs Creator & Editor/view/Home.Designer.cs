@@ -73,6 +73,7 @@
             Controls.Add(HomeLabel1);
             Controls.Add(HomeButton1);
             Name = "Home";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Home";
             ResumeLayout(false);
             PerformLayout();

@@ -12,19 +12,26 @@ namespace Proyecto_final___PDFs_Creator___Editor
 {
     public partial class Page4 : Form
     {
-        public Page4()
+
+        private string filePath;
+        private List<string> imageFiles = new List<string>();
+
+        public Page4(string operation_type, string filePath)
         {
             InitializeComponent();
+            Page4Button3.Text = operation_type;
         }
 
-        private void Page4Label1_Click(object sender, EventArgs e)
+        private void Page4Button3_Click(object sender, EventArgs e)
         {
-
+            Page5 page5 = new Page5(filePath, Page4TextBox1.Text, Page4TextBox2.Text, imageFiles);
+            page5.Show();
+            this.Hide();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Page4Button1_Click(object sender, EventArgs e)
         {
-
+            imageFiles.Add(Page4TextBox3.Text.Trim());
         }
     }
 }

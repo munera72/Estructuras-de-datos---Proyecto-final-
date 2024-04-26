@@ -72,6 +72,7 @@
             Controls.Add(CreatePdfButton);
             Controls.Add(Page3Label1);
             Name = "Page7";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();

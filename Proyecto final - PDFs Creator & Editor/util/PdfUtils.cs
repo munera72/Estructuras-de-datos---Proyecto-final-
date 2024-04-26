@@ -1,4 +1,8 @@
-﻿using Proyecto_final___PDFs_Creator___Editor.model;
+﻿using iText.IO.Image;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using Proyecto_final___PDFs_Creator___Editor.model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,7 +14,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
 {
     internal class PdfUtils
     {
-        public static Pdf CreatePdf(SqlDataReader reader)
+        public static Pdf CreatePdfObject(SqlDataReader reader)
         {
             Pdf pdf = new Pdf();
 
@@ -22,6 +26,19 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             return pdf;
 
         }
+
+
+        public static void CreatePdfFile(string filePath, string fileHeader, string fileContent, List<string> imagesList)
+        {
+            PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileStream("/Users/emanu/Documents/helloworld.pdf", FileMode.Create, FileAccess.Write)));
+            Document document = new Document(pdfDocument);
+
+            String line = "Hello! Welcome to iTextPdf";
+            document.Add(new Paragraph(line));
+            document.Close();
+            Console.WriteLine("Awesome PDF just got created.");
+        }
+
     }
 
 

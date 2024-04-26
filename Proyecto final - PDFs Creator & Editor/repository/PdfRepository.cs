@@ -38,7 +38,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
                         while (reader.Read())
                         {
 
-                            list.Add(PdfUtils.CreatePdf(reader));
+                            list.Add(PdfUtils.CreatePdfObject(reader));
 
                         }
                     }
@@ -68,7 +68,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
                     {
                         while (reader.Read())
                         {
-                            pdf = PdfUtils.CreatePdf(reader);
+                            pdf = PdfUtils.CreatePdfObject(reader);
                         }
                     }
 
