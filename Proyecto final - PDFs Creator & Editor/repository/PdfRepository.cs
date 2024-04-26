@@ -1,12 +1,9 @@
 ﻿using Calculator.util;
 using Proyecto_final___PDFs_Creator___Editor.model;
 using Proyecto_final___PDFs_Creator___Editor.util;
-using System;
-using System.Collections.Generic;
+
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 
 namespace Proyecto_final___PDFs_Creator___Editor.repository
@@ -21,7 +18,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
             return ConnectionFactory.GetInstance();
         }
 
-        List<Pdf> Repository<Pdf>.FindAll()
+        public List<Pdf> FindAll()
         {
             List<Pdf> list = new List<Pdf>();
 
@@ -53,8 +50,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
             return list;
         }
 
-
-        Pdf Repository<Pdf>.Find(int id)
+        public Pdf Find(int id)
         {
             string query = "SELECT * FROM dbo.pdfs_history WHERE id = @Id";
 
@@ -84,11 +80,11 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
 
         }
 
-        void Repository<Pdf>.Save(Pdf obj)
+        public void Save(Pdf obj)
         {
             Boolean isUpdateable = obj.Id != 0;
-            string sqlUpdate = "UPDATE dbo.pdfs_history SET file_name = @Name, last_modified= @Date, operation_perfomed = @Op WHERE id = @Id";
-            string sqlInsert = "INSERT INTO dbo.objs (file_name, last_modified, operation_perfomed) VALUES(@Name, @Date, @Op)";
+            string sqlUpdate = "UPDATE dbo.pdfs_history SET file_name = @Name, last_modified= @Date, operation_performed = @Op WHERE id = @Id";
+            string sqlInsert = "INSERT INTO dbo.pdfs_history (file_name, last_modified, operation_performed) VALUES(@Name, @Date, @Op)";
 
 
             using (SqlConnection conn = GetConnection())
@@ -103,7 +99,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
                     }
 
                     cmd.Parameters.AddWithValue("@Name", obj.Name);
-                    cmd.Parameters.AddWithValue("@Date", obj.LastModified);
+                    cmd.Parameters.AddWithValue("@Date", DateTime.Parse(obj.LastModified.ToString()));
                     cmd.Parameters.AddWithValue("@Op", obj.OperationPerformed);
 
                     cmd.ExecuteNonQuery();
@@ -111,7 +107,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
             }
         }
 
-        void Repository<Pdf>.Delete(int id)
+        public void Delete(int id)
         {
             string sql = "DELETE FROM dbo.pdfs_history WHERE id = @Id";
 

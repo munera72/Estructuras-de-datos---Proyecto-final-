@@ -4,7 +4,7 @@ namespace Calculator.util
 {
     internal class ConnectionFactory
     {
-        private static string connectionString = "server=DESKTOP-E998LP5;Database=pdf_history;User Id=sa;Password=root";
+        private static string connectionString = "server=DESKTOP-E998LP5;Database=pdf_editor_db;User Id=sa;Password=root";
 
         private static SqlConnection? connection;
 

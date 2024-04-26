@@ -1,3 +1,7 @@
+using Proyecto_final___PDFs_Creator___Editor.controller;
+using Proyecto_final___PDFs_Creator___Editor.model;
+using System.Diagnostics;
+
 namespace Proyecto_final___PDFs_Creator___Editor
 {
     internal static class Program
@@ -11,7 +15,12 @@ namespace Proyecto_final___PDFs_Creator___Editor
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            PdfController controller = new PdfController();
+
             Application.Run(new Home());
+
+
         }
     }
 }
