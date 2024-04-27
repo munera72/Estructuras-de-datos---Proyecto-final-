@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             Page3Label1 = new Label();
-            Page3TextBox1 = new TextBox();
+            textdirectory = new TextBox();
             CreatePdfButton = new Button();
             EditPdfButton = new Button();
+            btnopen = new Button();
             SuspendLayout();
             // 
             // Page3Label1
@@ -44,12 +45,12 @@
             Page3Label1.TabIndex = 0;
             Page3Label1.Text = "Ingrese la ruta del archivo o de guardado para crear o editar su pdf";
             // 
-            // Page3TextBox1
+            // textdirectory
             // 
-            Page3TextBox1.Location = new Point(93, 177);
-            Page3TextBox1.Name = "Page3TextBox1";
-            Page3TextBox1.Size = new Size(609, 23);
-            Page3TextBox1.TabIndex = 1;
+            textdirectory.Location = new Point(93, 177);
+            textdirectory.Name = "textdirectory";
+            textdirectory.Size = new Size(567, 23);
+            textdirectory.TabIndex = 1;
             // 
             // CreatePdfButton
             // 
@@ -73,14 +74,25 @@
             EditPdfButton.UseVisualStyleBackColor = true;
             EditPdfButton.Click += EditPdfButton_Click;
             // 
+            // btnopen
+            // 
+            btnopen.Location = new Point(666, 177);
+            btnopen.Name = "btnopen";
+            btnopen.Size = new Size(38, 23);
+            btnopen.TabIndex = 4;
+            btnopen.Text = "...";
+            btnopen.UseVisualStyleBackColor = true;
+            btnopen.Click += btnopen_Click;
+            // 
             // Page3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnopen);
             Controls.Add(EditPdfButton);
             Controls.Add(CreatePdfButton);
-            Controls.Add(Page3TextBox1);
+            Controls.Add(textdirectory);
             Controls.Add(Page3Label1);
             Name = "Page3";
             StartPosition = FormStartPosition.CenterScreen;
@@ -92,8 +104,9 @@
         #endregion
 
         private Label Page3Label1;
-        private TextBox Page3TextBox1;
+        private TextBox textdirectory;
         private Button CreatePdfButton;
         private Button EditPdfButton;
+        private Button btnopen;
     }
 }
