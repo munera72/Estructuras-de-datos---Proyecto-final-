@@ -60,9 +60,9 @@
             HomeLabel2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             HomeLabel2.Location = new Point(60, 186);
             HomeLabel2.Name = "HomeLabel2";
-            HomeLabel2.Size = new Size(668, 30);
+            HomeLabel2.Size = new Size(680, 30);
             HomeLabel2.TabIndex = 2;
-            HomeLabel2.Text = "Crea tus PDF, añade imágenes y contenid. O edita PDF ya existentes.";
+            HomeLabel2.Text = "Crea tus PDF, añade imágenes y contenido. O edita PDF ya existentes.";
             // 
             // Home
             // 

@@ -143,6 +143,7 @@
             Controls.Add(Page4TextBox1);
             Controls.Add(Page4Label1);
             Name = "Page4";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Page 4";
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);

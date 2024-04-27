@@ -16,24 +16,19 @@ namespace Proyecto_final___PDFs_Creator___Editor.controller
 
         public PdfController()
         {
-
             repository = new PdfRepository();
-
         }
 
 
         public List<Pdf> getAll()
         {
             return repository.FindAll();
-
         }
 
 
         public Pdf get(int id)
         {
-
             return repository.Find(id);
-
         }
 
 
@@ -47,7 +42,6 @@ namespace Proyecto_final___PDFs_Creator___Editor.controller
         {
             repository.Delete(id);
         }
-
 
     }
 }
