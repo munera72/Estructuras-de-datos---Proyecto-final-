@@ -50,11 +50,11 @@ namespace Proyecto_final___PDFs_Creator___Editor
 
         private void btnopen_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog folder = new FolderBrowserDialog();
-            DialogResult result = folder.ShowDialog();
+            OpenFileDialog filepath = new OpenFileDialog();
+            DialogResult result = filepath.ShowDialog();
             if (result == DialogResult.OK)
             {
-                textdirectory.Text = folder.SelectedPath;
+                textdirectory.Text = Path.GetFullPath(filepath.FileName);
             }
         }
     }
