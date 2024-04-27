@@ -30,8 +30,7 @@
         {
             Page3Label1 = new Label();
             textdirectory = new TextBox();
-            CreatePdfButton = new Button();
-            EditPdfButton = new Button();
+            Page3Button1 = new Button();
             btnopen = new Button();
             SuspendLayout();
             // 
@@ -52,27 +51,16 @@
             textdirectory.Size = new Size(567, 23);
             textdirectory.TabIndex = 1;
             // 
-            // CreatePdfButton
+            // Page3Button1
             // 
-            CreatePdfButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CreatePdfButton.Location = new Point(207, 243);
-            CreatePdfButton.Name = "CreatePdfButton";
-            CreatePdfButton.Size = new Size(123, 60);
-            CreatePdfButton.TabIndex = 2;
-            CreatePdfButton.Text = "Crear PDF";
-            CreatePdfButton.UseVisualStyleBackColor = true;
-            CreatePdfButton.Click += CreatePdfButton_Click;
-            // 
-            // EditPdfButton
-            // 
-            EditPdfButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            EditPdfButton.Location = new Point(470, 243);
-            EditPdfButton.Name = "EditPdfButton";
-            EditPdfButton.Size = new Size(129, 60);
-            EditPdfButton.TabIndex = 3;
-            EditPdfButton.Text = "Editar PDF";
-            EditPdfButton.UseVisualStyleBackColor = true;
-            EditPdfButton.Click += EditPdfButton_Click;
+            Page3Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Page3Button1.Location = new Point(315, 243);
+            Page3Button1.Name = "Page3Button1";
+            Page3Button1.Size = new Size(123, 60);
+            Page3Button1.TabIndex = 2;
+            Page3Button1.Text = "Crear PDF";
+            Page3Button1.UseVisualStyleBackColor = true;
+            Page3Button1.Click += CreatePdfButton_Click;
             // 
             // btnopen
             // 
@@ -90,8 +78,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnopen);
-            Controls.Add(EditPdfButton);
-            Controls.Add(CreatePdfButton);
+            Controls.Add(Page3Button1);
             Controls.Add(textdirectory);
             Controls.Add(Page3Label1);
             Name = "Page3";
@@ -105,8 +92,7 @@
 
         private Label Page3Label1;
         private TextBox textdirectory;
-        private Button CreatePdfButton;
-        private Button EditPdfButton;
+        private Button Page3Button1;
         private Button btnopen;
     }
 }

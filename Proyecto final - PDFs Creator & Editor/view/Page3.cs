@@ -13,10 +13,25 @@ namespace Proyecto_final___PDFs_Creator___Editor
 {
     public partial class Page3 : Form
     {
-        public Page3()
+
+        private string operationType;
+
+        public Page3(string operationType)
         {
             InitializeComponent();
+            this.operationType = operationType;
+
+            if (operationType == "Crear")
+            {
+                this.Page3Button1.Text = "Crear";
+            } else
+            {
+                this.Page3Button1.Text = "Editar";
+            }
+
         }
+
+
 
         private void CreatePdfButton_Click(object sender, EventArgs e)
         {
@@ -33,29 +48,30 @@ namespace Proyecto_final___PDFs_Creator___Editor
             }
         }
 
-        private void EditPdfButton_Click(object sender, EventArgs e)
-        {
-
-            if (string.IsNullOrEmpty(this.textdirectory.Text.Trim()))
-            {
-                Debug.WriteLine("Please provide a pdf file or a folder path to create the pdf.");
-            }
-            else
-            {
-                Page4 page4 = new Page4("Edit", this.textdirectory.Text.Trim());
-                page4.Show();
-                this.Hide();
-            }
-        }
 
         private void btnopen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog filepath = new OpenFileDialog();
-            DialogResult result = filepath.ShowDialog();
-            if (result == DialogResult.OK)
+
+            if(operationType == "Editar")
             {
-                textdirectory.Text = Path.GetFullPath(filepath.FileName);
+                OpenFileDialog filepath = new OpenFileDialog();
+                DialogResult result = filepath.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    textdirectory.Text = Path.GetFullPath(filepath.FileName);
+                }
+
+            } else
+            {
+                FolderBrowserDialog filepath = new FolderBrowserDialog();
+                DialogResult result = filepath.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    textdirectory.Text = filepath.SelectedPath;
+                }
             }
+
+
         }
     }
 }
