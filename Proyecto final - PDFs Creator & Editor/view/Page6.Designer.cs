@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CreatePdfButton = new Button();
+            Page6Button1 = new Button();
             Page3Label1 = new Label();
-            button1 = new Button();
+            Page6Button2 = new Button();
             SuspendLayout();
             // 
-            // CreatePdfButton
+            // Page6Button1
             // 
-            CreatePdfButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CreatePdfButton.Location = new Point(253, 231);
-            CreatePdfButton.Name = "CreatePdfButton";
-            CreatePdfButton.Size = new Size(123, 41);
-            CreatePdfButton.TabIndex = 7;
-            CreatePdfButton.Text = "Cerrar";
-            CreatePdfButton.UseVisualStyleBackColor = true;
+            Page6Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Page6Button1.Location = new Point(253, 231);
+            Page6Button1.Name = "Page6Button1";
+            Page6Button1.Size = new Size(123, 41);
+            Page6Button1.TabIndex = 7;
+            Page6Button1.Text = "Cerrar";
+            Page6Button1.UseVisualStyleBackColor = true;
+            Page6Button1.Click += Page6Button1_Click;
             // 
             // Page3Label1
             // 
@@ -53,23 +54,24 @@
             Page3Label1.TabIndex = 6;
             Page3Label1.Text = "Su archivo PDF ha sido guardado exitosamente.";
             // 
-            // button1
+            // Page6Button2
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(423, 231);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 41);
-            button1.TabIndex = 8;
-            button1.Text = "Volver al inicio";
-            button1.UseVisualStyleBackColor = true;
+            Page6Button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Page6Button2.Location = new Point(423, 231);
+            Page6Button2.Name = "Page6Button2";
+            Page6Button2.Size = new Size(123, 41);
+            Page6Button2.TabIndex = 8;
+            Page6Button2.Text = "Volver al inicio";
+            Page6Button2.UseVisualStyleBackColor = true;
+            Page6Button2.Click += Page6Button2_Click;
             // 
             // Page6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(CreatePdfButton);
+            Controls.Add(Page6Button2);
+            Controls.Add(Page6Button1);
             Controls.Add(Page3Label1);
             Name = "Page6";
             StartPosition = FormStartPosition.CenterScreen;
@@ -80,8 +82,8 @@
 
         #endregion
 
-        private Button CreatePdfButton;
+        private Button Page6Button1;
         private Label Page3Label1;
-        private Button button1;
+        private Button Page6Button2;
     }
 }

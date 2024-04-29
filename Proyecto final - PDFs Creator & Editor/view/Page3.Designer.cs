@@ -46,6 +46,7 @@
             // 
             // textdirectory
             // 
+            textdirectory.Enabled = false;
             textdirectory.Location = new Point(93, 177);
             textdirectory.Name = "textdirectory";
             textdirectory.Size = new Size(567, 23);

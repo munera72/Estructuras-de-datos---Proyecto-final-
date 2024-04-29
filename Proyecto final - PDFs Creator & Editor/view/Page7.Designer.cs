@@ -28,30 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            CreatePdfButton = new Button();
+            Page7Button2 = new Button();
+            Page7Button1 = new Button();
             Page3Label1 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // Page7Button2
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(427, 245);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 41);
-            button1.TabIndex = 11;
-            button1.Text = "Volver al inicio";
-            button1.UseVisualStyleBackColor = true;
+            Page7Button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Page7Button2.Location = new Point(427, 245);
+            Page7Button2.Name = "Page7Button2";
+            Page7Button2.Size = new Size(123, 41);
+            Page7Button2.TabIndex = 11;
+            Page7Button2.Text = "Volver al inicio";
+            Page7Button2.UseVisualStyleBackColor = true;
+            Page7Button2.Click += Page7Button2_Click;
             // 
-            // CreatePdfButton
+            // Page7Button1
             // 
-            CreatePdfButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CreatePdfButton.Location = new Point(257, 245);
-            CreatePdfButton.Name = "CreatePdfButton";
-            CreatePdfButton.Size = new Size(123, 41);
-            CreatePdfButton.TabIndex = 10;
-            CreatePdfButton.Text = "Cerrar";
-            CreatePdfButton.UseVisualStyleBackColor = true;
+            Page7Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Page7Button1.Location = new Point(257, 245);
+            Page7Button1.Name = "Page7Button1";
+            Page7Button1.Size = new Size(123, 41);
+            Page7Button1.TabIndex = 10;
+            Page7Button1.Text = "Cerrar";
+            Page7Button1.UseVisualStyleBackColor = true;
+            Page7Button1.Click += Page7Button1_Click;
             // 
             // Page3Label1
             // 
@@ -68,8 +70,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(CreatePdfButton);
+            Controls.Add(Page7Button2);
+            Controls.Add(Page7Button1);
             Controls.Add(Page3Label1);
             Name = "Page7";
             StartPosition = FormStartPosition.CenterScreen;
@@ -80,8 +82,8 @@
 
         #endregion
 
-        private Button button1;
-        private Button CreatePdfButton;
+        private Button Page7Button2;
+        private Button Page7Button1;
         private Label Page3Label1;
     }
 }

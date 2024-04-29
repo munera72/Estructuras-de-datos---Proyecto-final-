@@ -41,10 +41,18 @@ namespace Proyecto_final___PDFs_Creator___Editor
                 Debug.WriteLine("Please provide a pdf file or a folder path to create the pdf.");
             }
             else
-            {
-                Page4 page4 = new Page4("Create", this.textdirectory.Text.Trim());
-                page4.Show();
-                this.Hide();
+            {   
+                if (operationType == "Crear")
+                {
+                    Page4 page4 = new Page4("Crear", this.textdirectory.Text.Trim());
+                    page4.Show();
+                    this.Hide();
+                } else
+                {
+                    Page4 page4 = new Page4("Editar", this.textdirectory.Text.Trim());
+                    page4.Show();
+                    this.Hide();
+                }
             }
         }
 

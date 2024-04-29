@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,21 @@ namespace Proyecto_final___PDFs_Creator___Editor
 
         private void CreatePdfButton_Click(object sender, EventArgs e)
         {
-            PdfUtils.CreatePdfFile(filePath + Page5TextBox1.Text, title, content, imagesList);
+            try
+            {
+                PdfUtils.CreatePdfFile(filePath + "\\" + Page5TextBox1.Text.Trim() + ".pdf", title, content, imagesList);
+                Page6 page6 = new Page6();
+                page6.Show();
+                this.Hide();
+
+            } catch (Exception ex) 
+            {
+                Debug.WriteLine(ex.Message);
+
+                Page7 page7 = new Page7();
+                page7.Show();
+                this.Hide();
+            }
         }
     }
 }
