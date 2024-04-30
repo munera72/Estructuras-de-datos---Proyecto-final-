@@ -48,6 +48,8 @@ namespace Proyecto_final___PDFs_Creator___Editor
                 {
                     Debug.WriteLine(ex.Message);
 
+                    Debug.WriteLine(ex.StackTrace);
+
                     Page7 page7 = new Page7();
                     page7.Show();
                     this.Hide();

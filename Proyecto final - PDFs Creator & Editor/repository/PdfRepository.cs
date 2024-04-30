@@ -27,7 +27,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
 
                 conn.Open();
 
-                string sqlQuery = "Select * From dbo.pdfs_history";
+                string sqlQuery = "Select * From dbo.pdfs_history2";
 
 
                 using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
@@ -52,7 +52,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
 
         public Pdf Find(int id)
         {
-            string query = "SELECT * FROM dbo.pdfs_history WHERE id = @Id";
+            string query = "SELECT * FROM dbo.pdfs_history2 WHERE id = @Id";
 
             Pdf pdf = null;
 
@@ -83,8 +83,8 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
         public void Save(Pdf obj)
         {
             Boolean isUpdateable = obj.Id != 0;
-            string sqlUpdate = "UPDATE dbo.pdfs_history SET file_name = @Name, last_modified= @Date, operation_performed = @Op WHERE id = @Id";
-            string sqlInsert = "INSERT INTO dbo.pdfs_history (file_name, last_modified, operation_performed) VALUES(@Name, @Date, @Op)";
+            string sqlUpdate = "UPDATE dbo.pdfs_history2 SET file_name = @Name, last_modified= @Date, operation_performed = @Op WHERE id = @Id";
+            string sqlInsert = "INSERT INTO dbo.pdfs_history2 (file_name, last_modified, operation_performed) VALUES(@Name, @Date, @Op)";
 
 
             using (SqlConnection conn = GetConnection())
@@ -109,7 +109,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
 
         public void Delete(int id)
         {
-            string sql = "DELETE FROM dbo.pdfs_history WHERE id = @Id";
+            string sql = "DELETE FROM dbo.pdfs_history2 WHERE id = @Id";
 
             using (SqlConnection conn = GetConnection())
             {

@@ -1,8 +1,11 @@
 ﻿using iText.IO.Image;
 using iText.Kernel.Pdf;
+using iText.Kernel.Utils;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using Microsoft.VisualBasic.ApplicationServices;
+using Proyecto_final___PDFs_Creator___Editor.controller;
 using Proyecto_final___PDFs_Creator___Editor.model;
 using System;
 using System.Collections.Generic;
@@ -11,6 +14,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proyecto_final___PDFs_Creator___Editor.util
 {
@@ -35,60 +39,45 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileStream(filePath, FileMode.Create, FileAccess.Write)));
             Document document = new Document(pdfDocument);
 
-            document.SetMargins(70, 50, 40, 70); // Set margins (left, right, top, bottom)
-            document.SetFontSize(12); // Set default font size
-            document.SetTextAlignment(TextAlignment.LEFT); // Set default text alignment
+            document.SetMargins(70, 50, 40, 70);
+            document.SetFontSize(12);
+            document.SetTextAlignment(TextAlignment.LEFT);
 
             String header = fileHeader;
             document.Add(new Paragraph(header).SetFontSize(26).SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER));
             String content = fileContent;
             document.Add(new Paragraph(content));
             document.Close();
-            Debug.WriteLine("Awesome PDF just got created.");
+
+            PdfController controller = new PdfController();
+            Pdf pdf = new Pdf();
+            pdf.Name=filePath;
+            pdf.OperationPerformed = "CREATE";
+            pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
+            
+            controller.save(pdf);
         }
 
         public static void AddContentToExistingPdf(string filePath, string fileHeader, string fileContent, List<string> imagesList)
         {
 
-            //TO DO
+            PdfDocument pdf = new PdfDocument(new PdfWriter("C:\\Users\\emanu\\Documents\\newPdf.pdf"));
+            PdfMerger merger = new PdfMerger(pdf);
 
-            //// Paths to the existing PDF and the new PDF with additional content
-            //string existingPdfPath = filePath;
-            //string newPdfPath = "C:\\Users\\emanu\\Documents\\newpdf.pdf";
+            //Add pages from the first document
+            PdfDocument firstSourcePdf = new PdfDocument(new PdfReader(filePath));
+            merger.Merge(firstSourcePdf, 1, firstSourcePdf.GetNumberOfPages());
 
-            //// Create a PdfWriter for the new PDF
-            //PdfWriter writer = new PdfWriter(newPdfPath);
-            //PdfDocument newPdf = new PdfDocument(writer);
+            //Add pages from the second pdf document
+            string tempPdf = "C:\\Users\\emanu\\Documents\\temp.pdf";
+            CreatePdfFile(tempPdf, fileHeader, fileContent, imagesList);
 
-            //// Create a Document to add content to the new PDF
-            //Document document = new Document(newPdf);
-            //document.SetMargins(70, 50, 40, 70); // Set margins (left, right, top, bottom)
-            //document.SetFontSize(12); // Set default font size
-            //document.SetTextAlignment(TextAlignment.LEFT); // Set default text alignment
+            PdfDocument secondSourcePdf = new PdfDocument(new PdfReader(tempPdf));
+            merger.Merge(secondSourcePdf, 1, secondSourcePdf.GetNumberOfPages());
 
-            //// Add your new content to the document
-            //String header = fileHeader;
-            //document.Add(new Paragraph(header).SetFontSize(26).SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER));
-            //String content = fileContent;
-            //document.Add(new Paragraph(content));
-
-            //// Close the document
-
-            //// Open the existing PDF document
-            //PdfDocument existingPdf = new PdfDocument(new PdfWriter(new FileStream(existingPdfPath, FileMode.Append, FileAccess.Write)));
-
-            //// Merge the new PDF with the existing one
-            //newPdf.CopyPagesTo(1, newPdf.GetNumberOfPages(), existingPdf);
-
-            //// Close the existing PDF
-            //existingPdf.Close();
-
-            //document.Close();
-
-            //// Close the new PDF
-            //newPdf.Close();
-
-            //Console.WriteLine("PDFs merged successfully.");
+            firstSourcePdf.Close();
+            secondSourcePdf.Close();
+            pdf.Close();
         }
 
     }
