@@ -64,13 +64,17 @@ namespace Proyecto_final___PDFs_Creator___Editor
         private void Page4Button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog filepath = new OpenFileDialog();
+            filepath.Multiselect = true;
+            string[] rutasArchivos = new string[0];
             DialogResult result = filepath.ShowDialog();
+
             if (result == DialogResult.OK)
             {
-                Page4TextBox3.Text = Path.GetFullPath(filepath.FileName);
+                rutasArchivos = filepath.FileNames;
+                Page4TextBox3.Text = string.Join(", ", rutasArchivos);
             }
 
-            imageFiles.Add(Page4TextBox3.Text.Trim());
+            imageFiles.AddRange(rutasArchivos);
         }
 
         private void GoBackButton_Click(object sender, EventArgs e)

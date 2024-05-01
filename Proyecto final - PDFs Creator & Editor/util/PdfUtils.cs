@@ -1,4 +1,5 @@
 ﻿using iText.IO.Image;
+using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Kernel.Utils;
 using iText.Layout;
@@ -47,8 +48,21 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             document.Add(new Paragraph(header).SetFontSize(26).SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER));
             String content = fileContent;
             document.Add(new Paragraph(content));
+
             
-            
+            try
+            {
+                foreach (string rutaImagen in imagesList)
+                {
+                    iText.Layout.Element.Image imagen = new iText.Layout.Element.Image(iText.IO.Image.ImageDataFactory.Create(rutaImagen));
+
+                    document.Add(imagen);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar imágenes al PDF: " + ex.Message);
+            }
 
             document.Close();
 

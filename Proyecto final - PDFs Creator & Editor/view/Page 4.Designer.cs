@@ -35,7 +35,6 @@
             Page4TextBox2 = new TextBox();
             Page4TextBox3 = new TextBox();
             Page4Button1 = new Button();
-            Page4Button2 = new Button();
             Page4Button3 = new Button();
             Page4Label3 = new Label();
             GoBackButton = new Button();
@@ -86,27 +85,18 @@
             // 
             Page4TextBox3.Location = new Point(88, 417);
             Page4TextBox3.Name = "Page4TextBox3";
-            Page4TextBox3.Size = new Size(306, 23);
+            Page4TextBox3.Size = new Size(380, 23);
             Page4TextBox3.TabIndex = 4;
             // 
             // Page4Button1
             // 
-            Page4Button1.Location = new Point(404, 407);
+            Page4Button1.Location = new Point(485, 407);
             Page4Button1.Name = "Page4Button1";
             Page4Button1.Size = new Size(87, 41);
             Page4Button1.TabIndex = 5;
-            Page4Button1.Text = "Añadir Imágen";
+            Page4Button1.Text = "Añadir Imágenes";
             Page4Button1.UseVisualStyleBackColor = true;
             Page4Button1.Click += Page4Button1_Click;
-            // 
-            // Page4Button2
-            // 
-            Page4Button2.Location = new Point(497, 407);
-            Page4Button2.Name = "Page4Button2";
-            Page4Button2.Size = new Size(94, 41);
-            Page4Button2.TabIndex = 6;
-            Page4Button2.Text = "Añadir carpeta";
-            Page4Button2.UseVisualStyleBackColor = true;
             // 
             // Page4Button3
             // 
@@ -147,7 +137,6 @@
             Controls.Add(GoBackButton);
             Controls.Add(Page4Label3);
             Controls.Add(Page4Button3);
-            Controls.Add(Page4Button2);
             Controls.Add(Page4Button1);
             Controls.Add(Page4TextBox3);
             Controls.Add(Page4TextBox2);
@@ -172,7 +161,6 @@
         private Button Page4Button1;
         private TextBox Page4TextBox3;
         private Button Page4Button3;
-        private Button Page4Button2;
         private Label Page4Label3;
         private Button GoBackButton;
     }
