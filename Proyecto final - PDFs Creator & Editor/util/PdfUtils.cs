@@ -55,13 +55,12 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             pdf.OperationPerformed = "CREATE";
             pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
             
-            controller.save(pdf);
         }
 
         public static void AddContentToExistingPdf(string filePath, string fileHeader, string fileContent, List<string> imagesList)
         {
 
-            PdfDocument pdf = new PdfDocument(new PdfWriter("C:\\Users\\emanu\\Documents\\newPdf.pdf"));
+            PdfDocument pdf = new PdfDocument(new PdfWriter(filePath + "New.pdf"));
             PdfMerger merger = new PdfMerger(pdf);
 
             //Add pages from the first document
@@ -69,7 +68,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             merger.Merge(firstSourcePdf, 1, firstSourcePdf.GetNumberOfPages());
 
             //Add pages from the second pdf document
-            string tempPdf = "C:\\Users\\emanu\\Documents\\temp.pdf";
+            string tempPdf = filePath + "TempSource.pdf";
             CreatePdfFile(tempPdf, fileHeader, fileContent, imagesList);
 
             PdfDocument secondSourcePdf = new PdfDocument(new PdfReader(tempPdf));
@@ -78,6 +77,12 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             firstSourcePdf.Close();
             secondSourcePdf.Close();
             pdf.Close();
+
+            File.Delete(filePath + "TempSource.pdf");
+            File.Delete(filePath);
+            File.Copy(filePath + "New.pdf", filePath);
+            File.Delete(filePath + "New.pdf");
+
         }
 
     }
