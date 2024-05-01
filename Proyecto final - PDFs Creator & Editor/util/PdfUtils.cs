@@ -47,6 +47,9 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             document.Add(new Paragraph(header).SetFontSize(26).SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER));
             String content = fileContent;
             document.Add(new Paragraph(content));
+            
+            
+
             document.Close();
 
             
