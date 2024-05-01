@@ -63,6 +63,13 @@ namespace Proyecto_final___PDFs_Creator___Editor
 
         private void Page4Button1_Click(object sender, EventArgs e)
         {
+            OpenFileDialog filepath = new OpenFileDialog();
+            DialogResult result = filepath.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Page4TextBox3.Text = Path.GetFullPath(filepath.FileName);
+            }
+
             imageFiles.Add(Page4TextBox3.Text.Trim());
         }
 
