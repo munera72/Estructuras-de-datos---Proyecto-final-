@@ -49,11 +49,6 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             document.Add(new Paragraph(content));
             document.Close();
 
-            PdfController controller = new PdfController();
-            Pdf pdf = new Pdf();
-            pdf.Name=filePath;
-            pdf.OperationPerformed = "CREATE";
-            pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
             
         }
 

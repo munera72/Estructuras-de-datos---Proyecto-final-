@@ -1,4 +1,5 @@
-﻿using Proyecto_final___PDFs_Creator___Editor.util;
+﻿using Proyecto_final___PDFs_Creator___Editor.service;
+using Proyecto_final___PDFs_Creator___Editor.util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,7 +34,7 @@ namespace Proyecto_final___PDFs_Creator___Editor
         {
             try
             {
-                PdfUtils.CreatePdfFile(filePath + "\\" + Page5TextBox1.Text.Trim() + ".pdf", title, content, imagesList);
+                PdfService.CreatePdfService(filePath + "\\" + Page5TextBox1.Text.Trim() + ".pdf", title, content, imagesList);
                 Page6 page6 = new Page6();
                 page6.Show();
                 this.Hide();
