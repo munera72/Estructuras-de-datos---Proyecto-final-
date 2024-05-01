@@ -31,6 +31,7 @@
             CreatePdfButton = new Button();
             Page5TextBox1 = new TextBox();
             Page3Label1 = new Label();
+            GoBackButton = new Button();
             SuspendLayout();
             // 
             // CreatePdfButton
@@ -61,11 +62,22 @@
             Page3Label1.TabIndex = 3;
             Page3Label1.Text = "Proporcione un nombre para el archivo PDF.";
             // 
+            // GoBackButton
+            // 
+            GoBackButton.Location = new Point(12, 415);
+            GoBackButton.Name = "GoBackButton";
+            GoBackButton.Size = new Size(75, 23);
+            GoBackButton.TabIndex = 6;
+            GoBackButton.Text = "Atrás";
+            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.Click += GoBackButton_Click;
+            // 
             // Page5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(GoBackButton);
             Controls.Add(CreatePdfButton);
             Controls.Add(Page5TextBox1);
             Controls.Add(Page3Label1);
@@ -81,5 +93,6 @@
         private Button CreatePdfButton;
         private TextBox Page5TextBox1;
         private Label Page3Label1;
+        private Button GoBackButton;
     }
 }

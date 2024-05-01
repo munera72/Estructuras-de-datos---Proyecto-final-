@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            GoBackButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -41,11 +42,21 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // GoBackButton
+            // 
+            GoBackButton.Location = new Point(12, 416);
+            GoBackButton.Name = "GoBackButton";
+            GoBackButton.Size = new Size(75, 23);
+            GoBackButton.TabIndex = 4;
+            GoBackButton.Text = "Atrás";
+            GoBackButton.UseVisualStyleBackColor = true;
+            // 
             // Page2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(GoBackButton);
             Controls.Add(dataGridView1);
             Name = "Page2";
             StartPosition = FormStartPosition.CenterScreen;
@@ -57,5 +68,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button GoBackButton;
     }
 }

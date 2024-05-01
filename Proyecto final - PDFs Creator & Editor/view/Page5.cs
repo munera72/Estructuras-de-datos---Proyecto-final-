@@ -39,7 +39,8 @@ namespace Proyecto_final___PDFs_Creator___Editor
                 page6.Show();
                 this.Hide();
 
-            } catch (Exception ex) 
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
 
@@ -47,6 +48,13 @@ namespace Proyecto_final___PDFs_Creator___Editor
                 page7.Show();
                 this.Hide();
             }
+        }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+        {
+            Page4 page4 = new Page4("Crear", filePath);
+            page4.Show();
+            this.Hide();
         }
     }
 }

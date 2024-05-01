@@ -32,6 +32,7 @@
             textdirectory = new TextBox();
             Page3Button1 = new Button();
             btnopen = new Button();
+            GoBackButton = new Button();
             SuspendLayout();
             // 
             // Page3Label1
@@ -73,11 +74,22 @@
             btnopen.UseVisualStyleBackColor = true;
             btnopen.Click += btnopen_Click;
             // 
+            // GoBackButton
+            // 
+            GoBackButton.Location = new Point(12, 415);
+            GoBackButton.Name = "GoBackButton";
+            GoBackButton.Size = new Size(75, 23);
+            GoBackButton.TabIndex = 5;
+            GoBackButton.Text = "Atrás";
+            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.Click += GoBackButton_Click;
+            // 
             // Page3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(GoBackButton);
             Controls.Add(btnopen);
             Controls.Add(Page3Button1);
             Controls.Add(textdirectory);
@@ -95,5 +107,6 @@
         private TextBox textdirectory;
         private Button Page3Button1;
         private Button btnopen;
+        private Button GoBackButton;
     }
 }

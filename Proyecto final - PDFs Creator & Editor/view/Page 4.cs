@@ -36,7 +36,8 @@ namespace Proyecto_final___PDFs_Creator___Editor
                 Page5 page5 = new Page5(filePath, Page4TextBox1.Text, Page4TextBox2.Text, imageFiles);
                 page5.Show();
                 this.Hide();
-            } else
+            }
+            else
             {
                 try
                 {
@@ -45,7 +46,8 @@ namespace Proyecto_final___PDFs_Creator___Editor
                     page6.Show();
                     this.Hide();
 
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
 
@@ -62,6 +64,13 @@ namespace Proyecto_final___PDFs_Creator___Editor
         private void Page4Button1_Click(object sender, EventArgs e)
         {
             imageFiles.Add(Page4TextBox3.Text.Trim());
+        }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+        {
+            Page3 page3 = new Page3(operation_type);
+            page3.Show();
+            this.Hide();
         }
     }
 }

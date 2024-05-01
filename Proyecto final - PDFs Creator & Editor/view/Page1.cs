@@ -37,5 +37,12 @@ namespace Proyecto_final___PDFs_Creator___Editor
             f1.Show();
             this.Hide(); // Hide the current form
         }
+
+        private void GoBackButton_Click(object sender, EventArgs e)
+        {
+            Home page0 = new Home();
+            page0.Show();
+            this.Hide();
+        }
     }
 }

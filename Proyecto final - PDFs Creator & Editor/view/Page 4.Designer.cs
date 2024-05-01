@@ -38,6 +38,7 @@
             Page4Button2 = new Button();
             Page4Button3 = new Button();
             Page4Label3 = new Label();
+            GoBackButton = new Button();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
             // 
@@ -128,11 +129,22 @@
             Page4Label3.TabIndex = 8;
             Page4Label3.Text = "Añadir ruta de imagen o carpeta de imágenes";
             // 
+            // GoBackButton
+            // 
+            GoBackButton.Location = new Point(12, 526);
+            GoBackButton.Name = "GoBackButton";
+            GoBackButton.Size = new Size(75, 23);
+            GoBackButton.TabIndex = 9;
+            GoBackButton.Text = "Atrás";
+            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.Click += GoBackButton_Click;
+            // 
             // Page4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(675, 561);
+            Controls.Add(GoBackButton);
             Controls.Add(Page4Label3);
             Controls.Add(Page4Button3);
             Controls.Add(Page4Button2);
@@ -162,5 +174,6 @@
         private Button Page4Button3;
         private Button Page4Button2;
         private Label Page4Label3;
+        private Button GoBackButton;
     }
 }
