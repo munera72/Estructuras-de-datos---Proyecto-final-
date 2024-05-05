@@ -2,6 +2,7 @@
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Kernel.Utils;
+using iText.Html2pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
@@ -35,68 +36,24 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
         }
 
 
-        public static void CreatePdfFile(string filePath, string fileHeader, string fileContent, List<string> imagesList)
+        public static void CreatePdfFile(string filePath, string html)
         {
-            PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileStream(filePath, FileMode.Create, FileAccess.Write)));
-            Document document = new Document(pdfDocument);
+          try
+          {
+                PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileStream(filePath, FileMode.Create, FileAccess.Write)));
 
-            document.SetMargins(70, 50, 40, 70);
-            document.SetFontSize(12);
-            document.SetTextAlignment(TextAlignment.LEFT);
+            ConverterProperties properties = new ConverterProperties();
+            HtmlConverter.ConvertToPdf(html, pdfDocument, properties);
 
-            String header = fileHeader;
-            document.Add(new Paragraph(header).SetFontSize(26).SetTextAlignment(iText.Layout.Properties.TextAlignment.CENTER));
-            String content = fileContent;
-            document.Add(new Paragraph(content));
+            pdfDocument.Close();
 
-            
-            try
+            Console.WriteLine("El PDF se ha creado correctamente: " + filePath);
+           }
+         catch (Exception ex)
             {
-                foreach (string rutaImagen in imagesList)
-                {
-                    iText.Layout.Element.Image imagen = new iText.Layout.Element.Image(iText.IO.Image.ImageDataFactory.Create(rutaImagen));
-
-                    document.Add(imagen);
-                }
+                Console.WriteLine("Error al generar el PDF: " + ex.Message);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al agregar imágenes al PDF: " + ex.Message);
-            }
-
-            document.Close();
-
-            
-        }
-
-        public static void AddContentToExistingPdf(string filePath, string fileHeader, string fileContent, List<string> imagesList)
-        {
-
-            PdfDocument pdf = new PdfDocument(new PdfWriter(filePath + "New.pdf"));
-            PdfMerger merger = new PdfMerger(pdf);
-
-            //Add pages from the first document
-            PdfDocument firstSourcePdf = new PdfDocument(new PdfReader(filePath));
-            merger.Merge(firstSourcePdf, 1, firstSourcePdf.GetNumberOfPages());
-
-            //Add pages from the second pdf document
-            string tempPdf = filePath + "TempSource.pdf";
-            CreatePdfFile(tempPdf, fileHeader, fileContent, imagesList);
-
-            PdfDocument secondSourcePdf = new PdfDocument(new PdfReader(tempPdf));
-            merger.Merge(secondSourcePdf, 1, secondSourcePdf.GetNumberOfPages());
-
-            firstSourcePdf.Close();
-            secondSourcePdf.Close();
-            pdf.Close();
-
-            File.Delete(filePath + "TempSource.pdf");
-            File.Delete(filePath);
-            File.Copy(filePath + "New.pdf", filePath);
-            File.Delete(filePath + "New.pdf");
-
-        }
-
+         }
     }
 
 }
