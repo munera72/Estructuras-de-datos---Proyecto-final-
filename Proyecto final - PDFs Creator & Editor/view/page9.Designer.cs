@@ -31,6 +31,7 @@
             textBox1 = new TextBox();
             button1 = new Button();
             label1 = new Label();
+            GoBackButton = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -53,21 +54,34 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(39, 16);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(37, 18);
             label1.Name = "label1";
-            label1.Size = new Size(81, 15);
+            label1.Size = new Size(113, 21);
             label1.TabIndex = 2;
             label1.Text = "Codigo HTML";
+            // 
+            // GoBackButton
+            // 
+            GoBackButton.Location = new Point(37, 402);
+            GoBackButton.Name = "GoBackButton";
+            GoBackButton.Size = new Size(75, 23);
+            GoBackButton.TabIndex = 7;
+            GoBackButton.Text = "Atrás";
+            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.Click += GoBackButton_Click;
             // 
             // page9
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(GoBackButton);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "page9";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "page9";
             ResumeLayout(false);
             PerformLayout();
@@ -78,5 +92,6 @@
         private TextBox textBox1;
         private Button button1;
         private Label label1;
+        private Button GoBackButton;
     }
 }

@@ -45,8 +45,8 @@ namespace Proyecto_final___PDFs_Creator___Editor
             {
                 if (operationType == "Crear")
                 {
-                    Page4 page4 = new Page4("Crear", this.textdirectory.Text.Trim());
-                    page4.Show();
+                    page8 page8 = new page8("Crear", this.textdirectory.Text.Trim());
+                    page8.Show();
                     this.Hide();
                 }
                 else

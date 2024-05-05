@@ -79,8 +79,8 @@ namespace Proyecto_final___PDFs_Creator___Editor
 
         private void GoBackButton_Click(object sender, EventArgs e)
         {
-            Page3 page3 = new Page3(operation_type);
-            page3.Show();
+            page8 page8 = new page8(operation_type, filePath);
+            page8.Show();
             this.Hide();
         }
     }
