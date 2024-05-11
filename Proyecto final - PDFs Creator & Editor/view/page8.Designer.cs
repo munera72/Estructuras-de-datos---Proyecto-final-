@@ -40,7 +40,7 @@
             button1.Name = "button1";
             button1.Size = new Size(151, 59);
             button1.TabIndex = 0;
-            button1.Text = "Crear con Texto";
+            button1.Text = "Crear con Texto e Imagen";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
