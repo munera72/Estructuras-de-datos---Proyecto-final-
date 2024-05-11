@@ -69,6 +69,26 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
 
         }
 
+        public static void CreatePdfService(string filePath, string htmlContent)
+        {
+            PdfUtils.CreatePdfFile(filePath, htmlContent);
+
+            //try
+            //{
+            //    Pdf pdf = new Pdf();
+            //    pdf.Name = filePath;
+            //    pdf.OperationPerformed = "Create";
+            //    pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
+
+            //    GetController().save(pdf);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.WriteLine(ex.StackTrace);
+            //}
+
+        }
+
 
 
 

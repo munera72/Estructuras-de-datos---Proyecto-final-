@@ -20,6 +20,7 @@ namespace Proyecto_final___PDFs_Creator___Editor
         private string title;
         private string content;
         private List<string> imagesList;
+        private bool isHtml = false;
 
         public Page5(string filePath, string title, string content, List<string> imagesList)
         {
@@ -30,19 +31,41 @@ namespace Proyecto_final___PDFs_Creator___Editor
             this.imagesList = imagesList;
         }
 
+        public Page5(string filePath, string content, bool isHtml)
+        {
+            InitializeComponent();
+            this.filePath = filePath;
+            this.content = content;
+            this.isHtml = isHtml;
+
+        }
+
         private void CreatePdfButton_Click(object sender, EventArgs e)
         {
             try
             {
-                PdfService.CreatePdfService(filePath + "\\" + Page5TextBox1.Text.Trim() + ".pdf", title, content, imagesList);
-                Page6 page6 = new Page6();
-                page6.Show();
-                this.Hide();
+
+                if (isHtml)
+                {
+                    PdfService.CreatePdfService(filePath + "\\" + Page5TextBox1.Text.Trim() + ".pdf", content);
+                    Page6 page6 = new Page6();
+                    page6.Show();
+                    this.Hide();
+
+                } else
+                {
+                    PdfService.CreatePdfService(filePath + "\\" + Page5TextBox1.Text.Trim() + ".pdf", title, content, imagesList);
+                    Page6 page6 = new Page6();
+                    page6.Show();
+                    this.Hide();
+                }
 
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
+                Debug.WriteLine(ex.StackTrace);
+
 
                 Page7 page7 = new Page7();
                 page7.Show();

@@ -1,4 +1,5 @@
-﻿using iText.IO.Image;
+﻿using iText.Html2pdf;
+using iText.IO.Image;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Kernel.Utils;
@@ -67,6 +68,34 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
             document.Close();
 
             
+        }
+
+        public static void CreatePdfFile(string filepath, string htmlContent)
+        {
+            // Ruta del archivo PDF de salida
+            string rutaPDF = filepath;
+
+            try
+            {
+                // Leer el contenido del archivo HTML
+                string html = htmlContent;
+
+                // Crear un nuevo archivo PDF
+                PdfDocument pdfDoc = new PdfDocument(new PdfWriter(rutaPDF));
+
+                // Convertir HTML a PDF
+                ConverterProperties properties = new ConverterProperties();
+                HtmlConverter.ConvertToPdf(html, pdfDoc, properties);
+
+                // Cerrar el documento
+                pdfDoc.Close();
+
+                Console.WriteLine("El PDF se ha creado correctamente: " + rutaPDF);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al generar el PDF: " + ex.Message);
+            }
         }
 
         public static void AddContentToExistingPdf(string filePath, string fileHeader, string fileContent, List<string> imagesList)
