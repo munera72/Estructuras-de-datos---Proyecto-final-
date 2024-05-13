@@ -32,40 +32,48 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
         public static void AddContentPdfService(string filePath, string fileHeader, string fileContent, List<string> imageFiles)
         {
             PdfUtils.AddContentToExistingPdf(filePath, fileHeader, fileContent, imageFiles);
- 
-            //try
-            //{
 
-            //    Pdf pdf = new Pdf();
-            //    pdf.Name = filePath;
-            //    pdf.OperationPerformed = "EDIT";
-            //    pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
+            try
+            {
 
-            //    GetController().save(pdf);
+                Pdf pdf = GetController().get(filePath);
+                pdf.OperationPerformed = "EDIT";
+                pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
 
-            //} catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.StackTrace);
-            //}
+                Debug.Write(pdf.Id);
+
+                GetController().save(pdf);
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                Debug.WriteLine(ex.StackTrace);
+            }
         }
 
         public static void CreatePdfService(string filePath, string fileHeader, string fileContent, List<string> imageFiles)
         {
             PdfUtils.CreatePdfFile(filePath, fileHeader, fileContent, imageFiles);
 
-            //try
-            //{
-            //    Pdf pdf = new Pdf();
-            //    pdf.Name = filePath;
-            //    pdf.OperationPerformed = "Create";
-            //    pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
+            try
+            {
+                Pdf pdf = new Pdf();
+                pdf.Name = filePath;
+                pdf.OperationPerformed = "CREATE";
+                pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
 
-            //    GetController().save(pdf);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.StackTrace);
-            //}
+                GetController().save(pdf);
+            }
+            catch (Exception ex)
+            {
+                File.Delete(filePath); 
+
+                Debug.WriteLine(ex.Message);
+                Debug.WriteLine(ex.StackTrace);
+
+                throw ex;
+            }
 
         }
 
@@ -73,19 +81,24 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
         {
             PdfUtils.CreatePdfFile(filePath, htmlContent);
 
-            //try
-            //{
-            //    Pdf pdf = new Pdf();
-            //    pdf.Name = filePath;
-            //    pdf.OperationPerformed = "Create";
-            //    pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
+            try
+            {
+                Pdf pdf = new Pdf();
+                pdf.Name = filePath;
+                pdf.OperationPerformed = "CREATE";
+                pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
 
-            //    GetController().save(pdf);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.StackTrace);
-            //}
+                GetController().save(pdf);
+            }
+            catch (Exception ex)
+            {
+                File.Delete(filePath);
+
+                Debug.WriteLine(ex.Message);
+                Debug.WriteLine(ex.StackTrace);
+
+                throw ex;
+            }
 
         }
 

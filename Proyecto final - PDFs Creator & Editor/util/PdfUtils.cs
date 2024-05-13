@@ -35,7 +35,6 @@ namespace Proyecto_final___PDFs_Creator___Editor.util
 
         }
 
-
         public static void CreatePdfFile(string filePath, string fileHeader, string fileContent, List<string> imagesList)
         {
             PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileStream(filePath, FileMode.Create, FileAccess.Write)));

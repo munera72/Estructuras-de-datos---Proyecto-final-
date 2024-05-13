@@ -42,6 +42,9 @@ namespace Proyecto_final___PDFs_Creator___Editor
                 try
                 {
                     PdfService.AddContentPdfService(filePath, Page4TextBox1.Text, Page4TextBox2.Text, imageFiles);
+
+
+
                     Page6 page6 = new Page6();
                     page6.Show();
                     this.Hide();
@@ -50,8 +53,9 @@ namespace Proyecto_final___PDFs_Creator___Editor
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
-
                     Debug.WriteLine(ex.StackTrace);
+
+
 
                     Page7 page7 = new Page7();
                     page7.Show();

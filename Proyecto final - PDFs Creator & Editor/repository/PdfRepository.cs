@@ -3,6 +3,7 @@ using Proyecto_final___PDFs_Creator___Editor.model;
 using Proyecto_final___PDFs_Creator___Editor.util;
 
 using System.Data.SqlClient;
+using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 
 
@@ -78,6 +79,35 @@ namespace Proyecto_final___PDFs_Creator___Editor.repository
 
             return pdf;
 
+        }
+
+        public Pdf Find(string name)
+        {
+            string query = "SELECT * FROM dbo.pdfs_history2 WHERE file_name = @name";
+
+            Pdf pdf = null;
+
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", name);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            pdf = PdfUtils.CreatePdfObject(reader);
+                        }
+                    }
+
+                }
+
+            }
+
+            return pdf;
         }
 
         public void Save(Pdf obj)
