@@ -40,8 +40,6 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
                 pdf.OperationPerformed = "EDIT";
                 pdf.LastModified = DateOnly.FromDateTime(DateTime.Now);
 
-                Debug.Write(pdf.Id);
-
                 GetController().save(pdf);
 
             }

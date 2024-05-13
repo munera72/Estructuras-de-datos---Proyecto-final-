@@ -34,22 +34,26 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(63, 26);
+            dataGridView1.Location = new Point(54, 41);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(675, 384);
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(571, 304);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Page2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(693, 384);
             Controls.Add(dataGridView1);
             Name = "Page2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Page2";
+            Load += Page2_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
