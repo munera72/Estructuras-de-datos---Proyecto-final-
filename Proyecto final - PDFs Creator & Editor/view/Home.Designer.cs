@@ -35,13 +35,15 @@
             // 
             // HomeButton1
             // 
+            HomeButton1.BackColor = Color.FromArgb(234, 216, 192);
+            HomeButton1.Cursor = Cursors.Hand;
             HomeButton1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             HomeButton1.Location = new Point(311, 272);
             HomeButton1.Name = "HomeButton1";
             HomeButton1.Size = new Size(181, 55);
             HomeButton1.TabIndex = 0;
             HomeButton1.Text = "Empezar";
-            HomeButton1.UseVisualStyleBackColor = true;
+            HomeButton1.UseVisualStyleBackColor = false;
             HomeButton1.Click += HomeButton1_Click;
             // 
             // HomeLabel1
@@ -68,13 +70,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(800, 450);
             Controls.Add(HomeLabel2);
             Controls.Add(HomeLabel1);
             Controls.Add(HomeButton1);
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Home";
+            Text = "PDF Magician";
             ResumeLayout(false);
             PerformLayout();
         }

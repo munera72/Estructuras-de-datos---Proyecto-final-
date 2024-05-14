@@ -48,11 +48,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(693, 384);
             Controls.Add(dataGridView1);
             Name = "Page2";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Page2";
+            Text = "PDF Magician";
             Load += Page2_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

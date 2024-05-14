@@ -35,13 +35,15 @@
             // 
             // Page6Button1
             // 
+            Page6Button1.BackColor = Color.FromArgb(234, 216, 192);
+            Page6Button1.Cursor = Cursors.Hand;
             Page6Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Page6Button1.Location = new Point(253, 231);
             Page6Button1.Name = "Page6Button1";
             Page6Button1.Size = new Size(123, 41);
             Page6Button1.TabIndex = 7;
             Page6Button1.Text = "Cerrar";
-            Page6Button1.UseVisualStyleBackColor = true;
+            Page6Button1.UseVisualStyleBackColor = false;
             Page6Button1.Click += Page6Button1_Click;
             // 
             // Page3Label1
@@ -56,26 +58,29 @@
             // 
             // Page6Button2
             // 
+            Page6Button2.BackColor = Color.FromArgb(234, 216, 192);
+            Page6Button2.Cursor = Cursors.Hand;
             Page6Button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Page6Button2.Location = new Point(423, 231);
             Page6Button2.Name = "Page6Button2";
             Page6Button2.Size = new Size(123, 41);
             Page6Button2.TabIndex = 8;
             Page6Button2.Text = "Volver al inicio";
-            Page6Button2.UseVisualStyleBackColor = true;
+            Page6Button2.UseVisualStyleBackColor = false;
             Page6Button2.Click += Page6Button2_Click;
             // 
             // Page6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(800, 450);
             Controls.Add(Page6Button2);
             Controls.Add(Page6Button1);
             Controls.Add(Page3Label1);
             Name = "Page6";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "PDF Magician";
             ResumeLayout(false);
             PerformLayout();
         }

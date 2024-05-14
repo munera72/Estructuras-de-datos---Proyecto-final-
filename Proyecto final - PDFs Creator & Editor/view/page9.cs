@@ -38,5 +38,10 @@ namespace Proyecto_final___PDFs_Creator___Editor
             this.Hide();
 
         }
+
+        private void page9_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

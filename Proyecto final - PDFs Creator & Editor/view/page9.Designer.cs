@@ -44,12 +44,14 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(234, 216, 192);
+            button1.Cursor = Cursors.Hand;
             button1.Location = new Point(654, 402);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
             button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // label1
@@ -64,18 +66,21 @@
             // 
             // GoBackButton
             // 
+            GoBackButton.BackColor = Color.FromArgb(234, 216, 192);
+            GoBackButton.Cursor = Cursors.Hand;
             GoBackButton.Location = new Point(37, 402);
             GoBackButton.Name = "GoBackButton";
             GoBackButton.Size = new Size(75, 23);
             GoBackButton.TabIndex = 7;
             GoBackButton.Text = "Atrás";
-            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.UseVisualStyleBackColor = false;
             GoBackButton.Click += GoBackButton_Click;
             // 
             // page9
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(800, 450);
             Controls.Add(GoBackButton);
             Controls.Add(label1);
@@ -83,7 +88,8 @@
             Controls.Add(textBox1);
             Name = "page9";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "page9";
+            Text = "PDF Magician";
+            Load += page9_Load;
             ResumeLayout(false);
             PerformLayout();
         }

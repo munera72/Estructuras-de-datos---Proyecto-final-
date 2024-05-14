@@ -55,39 +55,46 @@
             // 
             // Page3Button1
             // 
+            Page3Button1.BackColor = Color.FromArgb(234, 216, 192);
+            Page3Button1.Cursor = Cursors.Hand;
             Page3Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Page3Button1.Location = new Point(315, 243);
             Page3Button1.Name = "Page3Button1";
             Page3Button1.Size = new Size(123, 60);
             Page3Button1.TabIndex = 2;
             Page3Button1.Text = "Crear PDF";
-            Page3Button1.UseVisualStyleBackColor = true;
+            Page3Button1.UseVisualStyleBackColor = false;
             Page3Button1.Click += CreatePdfButton_Click;
             // 
             // btnopen
             // 
+            btnopen.BackColor = Color.FromArgb(234, 216, 192);
+            btnopen.Cursor = Cursors.Hand;
             btnopen.Location = new Point(666, 177);
             btnopen.Name = "btnopen";
             btnopen.Size = new Size(38, 23);
             btnopen.TabIndex = 4;
             btnopen.Text = "...";
-            btnopen.UseVisualStyleBackColor = true;
+            btnopen.UseVisualStyleBackColor = false;
             btnopen.Click += btnopen_Click;
             // 
             // GoBackButton
             // 
+            GoBackButton.BackColor = Color.FromArgb(234, 216, 192);
+            GoBackButton.Cursor = Cursors.Hand;
             GoBackButton.Location = new Point(12, 415);
             GoBackButton.Name = "GoBackButton";
             GoBackButton.Size = new Size(75, 23);
             GoBackButton.TabIndex = 5;
             GoBackButton.Text = "Atrás";
-            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.UseVisualStyleBackColor = false;
             GoBackButton.Click += GoBackButton_Click;
             // 
             // Page3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(800, 450);
             Controls.Add(GoBackButton);
             Controls.Add(btnopen);
@@ -96,7 +103,7 @@
             Controls.Add(Page3Label1);
             Name = "Page3";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Page 3";
+            Text = "PDF Magician";
             ResumeLayout(false);
             PerformLayout();
         }

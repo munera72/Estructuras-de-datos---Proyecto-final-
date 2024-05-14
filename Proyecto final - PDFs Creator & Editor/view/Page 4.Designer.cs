@@ -90,23 +90,27 @@
             // 
             // Page4Button1
             // 
+            Page4Button1.BackColor = Color.FromArgb(234, 216, 192);
+            Page4Button1.Cursor = Cursors.Hand;
             Page4Button1.Location = new Point(485, 407);
             Page4Button1.Name = "Page4Button1";
             Page4Button1.Size = new Size(87, 41);
             Page4Button1.TabIndex = 5;
             Page4Button1.Text = "Añadir Imágenes";
-            Page4Button1.UseVisualStyleBackColor = true;
+            Page4Button1.UseVisualStyleBackColor = false;
             Page4Button1.Click += Page4Button1_Click;
             // 
             // Page4Button3
             // 
+            Page4Button3.BackColor = Color.FromArgb(234, 216, 192);
+            Page4Button3.Cursor = Cursors.Hand;
             Page4Button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Page4Button3.Location = new Point(266, 480);
             Page4Button3.Name = "Page4Button3";
             Page4Button3.Size = new Size(141, 47);
             Page4Button3.TabIndex = 7;
             Page4Button3.Text = "Guardar PDF";
-            Page4Button3.UseVisualStyleBackColor = true;
+            Page4Button3.UseVisualStyleBackColor = false;
             Page4Button3.Click += Page4Button3_Click;
             // 
             // Page4Label3
@@ -121,18 +125,21 @@
             // 
             // GoBackButton
             // 
+            GoBackButton.BackColor = Color.FromArgb(234, 216, 192);
+            GoBackButton.Cursor = Cursors.Hand;
             GoBackButton.Location = new Point(12, 526);
             GoBackButton.Name = "GoBackButton";
             GoBackButton.Size = new Size(75, 23);
             GoBackButton.TabIndex = 9;
             GoBackButton.Text = "Atrás";
-            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.UseVisualStyleBackColor = false;
             GoBackButton.Click += GoBackButton_Click;
             // 
             // Page4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(675, 561);
             Controls.Add(GoBackButton);
             Controls.Add(Page4Label3);
@@ -145,7 +152,7 @@
             Controls.Add(Page4Label1);
             Name = "Page4";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Page 4";
+            Text = "PDF Magician";
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
             PerformLayout();

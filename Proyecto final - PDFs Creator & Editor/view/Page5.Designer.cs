@@ -36,13 +36,15 @@
             // 
             // CreatePdfButton
             // 
+            CreatePdfButton.BackColor = Color.FromArgb(234, 216, 192);
+            CreatePdfButton.Cursor = Cursors.Hand;
             CreatePdfButton.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CreatePdfButton.Location = new Point(338, 227);
             CreatePdfButton.Name = "CreatePdfButton";
             CreatePdfButton.Size = new Size(123, 60);
             CreatePdfButton.TabIndex = 5;
             CreatePdfButton.Text = "Aceptar";
-            CreatePdfButton.UseVisualStyleBackColor = true;
+            CreatePdfButton.UseVisualStyleBackColor = false;
             CreatePdfButton.Click += CreatePdfButton_Click;
             // 
             // Page5TextBox1
@@ -64,18 +66,21 @@
             // 
             // GoBackButton
             // 
+            GoBackButton.BackColor = Color.FromArgb(234, 216, 192);
+            GoBackButton.Cursor = Cursors.Hand;
             GoBackButton.Location = new Point(12, 415);
             GoBackButton.Name = "GoBackButton";
             GoBackButton.Size = new Size(75, 23);
             GoBackButton.TabIndex = 6;
             GoBackButton.Text = "Atrás";
-            GoBackButton.UseVisualStyleBackColor = true;
+            GoBackButton.UseVisualStyleBackColor = false;
             GoBackButton.Click += GoBackButton_Click;
             // 
             // Page5
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(800, 450);
             Controls.Add(GoBackButton);
             Controls.Add(CreatePdfButton);
@@ -83,7 +88,7 @@
             Controls.Add(Page3Label1);
             Name = "Page5";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "PDF Magician";
             ResumeLayout(false);
             PerformLayout();
         }

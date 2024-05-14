@@ -35,24 +35,28 @@
             // 
             // Page7Button2
             // 
+            Page7Button2.BackColor = Color.FromArgb(234, 216, 192);
+            Page7Button2.Cursor = Cursors.Hand;
             Page7Button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Page7Button2.Location = new Point(427, 245);
             Page7Button2.Name = "Page7Button2";
             Page7Button2.Size = new Size(123, 41);
             Page7Button2.TabIndex = 11;
             Page7Button2.Text = "Volver al inicio";
-            Page7Button2.UseVisualStyleBackColor = true;
+            Page7Button2.UseVisualStyleBackColor = false;
             Page7Button2.Click += Page7Button2_Click;
             // 
             // Page7Button1
             // 
+            Page7Button1.BackColor = Color.FromArgb(234, 216, 192);
+            Page7Button1.Cursor = Cursors.Hand;
             Page7Button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Page7Button1.Location = new Point(257, 245);
             Page7Button1.Name = "Page7Button1";
             Page7Button1.Size = new Size(123, 41);
             Page7Button1.TabIndex = 10;
             Page7Button1.Text = "Cerrar";
-            Page7Button1.UseVisualStyleBackColor = true;
+            Page7Button1.UseVisualStyleBackColor = false;
             Page7Button1.Click += Page7Button1_Click;
             // 
             // Page3Label1
@@ -69,13 +73,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 242, 225);
             ClientSize = new Size(800, 450);
             Controls.Add(Page7Button2);
             Controls.Add(Page7Button1);
             Controls.Add(Page3Label1);
             Name = "Page7";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "PDF Magician";
             ResumeLayout(false);
             PerformLayout();
         }
