@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_final___PDFs_Creator___Editor.model
 {
-    internal class Pdf
+    public class Pdf
     {
        
         public int Id { get; set; }

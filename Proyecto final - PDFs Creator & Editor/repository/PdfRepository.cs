@@ -9,7 +9,7 @@ using static iText.StyledXmlParser.Jsoup.Select.Evaluator;
 
 namespace Proyecto_final___PDFs_Creator___Editor.repository
 {
-    internal class PdfRepository : Repository<Pdf>
+    public class PdfRepository : Repository<Pdf>
     {
 
         public PdfRepository() { }
