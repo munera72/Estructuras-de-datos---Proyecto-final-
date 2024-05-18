@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proyecto final - PDFs Creator & Editor", "Proyecto final - PDFs Creator & Editor\Proyecto final - PDFs Creator & Editor.csproj", "{ED684FBA-6E7C-41C4-9FCF-0EDA8BD61416}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowProject1", "SpecFlowProject1\SpecFlowProject1.csproj", "{70B28A88-ECEA-4A38-9BF6-AAD3B5BAC717}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowProject.Specs", "SpecFlowProject.Specs\SpecFlowProject.Specs.csproj", "{239442C3-E577-4E41-911C-444B4AF82E27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{ED684FBA-6E7C-41C4-9FCF-0EDA8BD61416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED684FBA-6E7C-41C4-9FCF-0EDA8BD61416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED684FBA-6E7C-41C4-9FCF-0EDA8BD61416}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70B28A88-ECEA-4A38-9BF6-AAD3B5BAC717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70B28A88-ECEA-4A38-9BF6-AAD3B5BAC717}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70B28A88-ECEA-4A38-9BF6-AAD3B5BAC717}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70B28A88-ECEA-4A38-9BF6-AAD3B5BAC717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239442C3-E577-4E41-911C-444B4AF82E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239442C3-E577-4E41-911C-444B4AF82E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239442C3-E577-4E41-911C-444B4AF82E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239442C3-E577-4E41-911C-444B4AF82E27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
