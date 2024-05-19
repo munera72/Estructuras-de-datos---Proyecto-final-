@@ -15,3 +15,10 @@ Scenario: Delete a PDF entry
 	When the pdf with that id is deleted
 	And the pdf is searched
 	Then the result of the search should be null
+
+@tag1
+Scenario: Search a PDF by name
+    Given the PDF name is "D:\\prueba1.pdf"
+    When the PDF is searched by name
+    Then the name from the PDF obtained should be "D:\\prueba1.pdf"
+
