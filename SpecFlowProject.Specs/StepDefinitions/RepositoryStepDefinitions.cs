@@ -59,7 +59,6 @@ namespace SpecFlowProject.Specs.StepDefinitions
             }
             else
             {
-                // Si el objeto Pdf es null, arrojar una excepción o manejarlo de otra manera según sea necesario
                 throw new Exception("El PDF no fue encontrado.");
             }
         }
