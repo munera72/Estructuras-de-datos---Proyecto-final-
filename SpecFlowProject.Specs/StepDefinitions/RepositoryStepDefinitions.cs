@@ -13,6 +13,14 @@ namespace SpecFlowProject.Specs.StepDefinitions
         private int id;
         private string name;
         private Pdf pdf;
+        private List<Pdf> allPDFs;
+
+
+        [Given(@"there are multiple PDFs in the repository")]
+        public void GivenThereAreMultiplePDFsInTheRepository()
+        {
+ 
+        }
 
         [Given(@"the id is (.*)")]
         public void GivenTheIdIs(int p0)
@@ -30,6 +38,12 @@ namespace SpecFlowProject.Specs.StepDefinitions
         public void ThenTheIdFromThePdfObtainedShouldBe(int p0)
         {
             pdf.Id.Should().Be(id);
+        }
+
+        [When(@"all PDFs are searched")]
+        public void WhenAllPDFsAreSearched()
+        {
+            allPDFs = repository.FindAll();
         }
 
         [When(@"the pdf with that id is deleted")]
@@ -63,6 +77,12 @@ namespace SpecFlowProject.Specs.StepDefinitions
             }
         }
 
+        [Then(@"all PDFs should be retrieved from the repository")]
+        public void ThenAllPDFsShouldBeRetrievedFromTheRepository()
+        {
+            allPDFs.Should().NotBeNull();
+            
+        }
 
         [Then(@"the result of the search should be null")]
         public void ThenTheResultOfTheSearchShouldBeNull()

@@ -22,3 +22,8 @@ Scenario: Search a PDF by name
     When the PDF is searched by name
     Then the name from the PDF obtained should be "D:\\prueba1.pdf"
 
+@tag1
+Scenario: Find all PDFs in the repository
+    Given there are multiple PDFs in the repository
+    When all PDFs are searched
+    Then all PDFs should be retrieved from the repository
