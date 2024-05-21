@@ -1,22 +1,13 @@
 ﻿using iText.Html2pdf;
-using iText.IO.Image;
-using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Kernel.Utils;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
-using Microsoft.VisualBasic.ApplicationServices;
-using Proyecto_final___PDFs_Creator___Editor.controller;
 using Proyecto_final___PDFs_Creator___Editor.model;
-using System;
-using System.Collections.Generic;
+
 using System.Data.SqlClient;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace Proyecto_final___PDFs_Creator___Editor.util
 {

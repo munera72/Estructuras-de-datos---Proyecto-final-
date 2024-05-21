@@ -1,12 +1,7 @@
 ﻿using Proyecto_final___PDFs_Creator___Editor.controller;
 using Proyecto_final___PDFs_Creator___Editor.model;
 using Proyecto_final___PDFs_Creator___Editor.util;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_final___PDFs_Creator___Editor.service
 {
@@ -52,10 +47,10 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
 
         public static void CreatePdfService(string filePath, string fileHeader, string fileContent, List<string> imageFiles)
         {
-            PdfUtils.CreatePdfFile(filePath, fileHeader, fileContent, imageFiles);
 
             try
             {
+                PdfUtils.CreatePdfFile(filePath, fileHeader, fileContent, imageFiles);
                 Pdf pdf = new Pdf();
                 pdf.Name = filePath;
                 pdf.OperationPerformed = "CREATE";
@@ -65,7 +60,7 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
             }
             catch (Exception ex)
             {
-                File.Delete(filePath); 
+                File.Delete(filePath);
 
                 Debug.WriteLine(ex.Message);
                 Debug.WriteLine(ex.StackTrace);
@@ -77,10 +72,10 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
 
         public static void CreatePdfService(string filePath, string htmlContent)
         {
-            PdfUtils.CreatePdfFile(filePath, htmlContent);
 
             try
             {
+                PdfUtils.CreatePdfFile(filePath, htmlContent);
                 Pdf pdf = new Pdf();
                 pdf.Name = filePath;
                 pdf.OperationPerformed = "CREATE";
