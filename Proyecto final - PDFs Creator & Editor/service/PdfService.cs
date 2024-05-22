@@ -47,10 +47,10 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
 
         public static void CreatePdfService(string filePath, string fileHeader, string fileContent, List<string> imageFiles)
         {
+            PdfUtils.CreatePdfFile(filePath, fileHeader, fileContent, imageFiles);
 
             try
             {
-                PdfUtils.CreatePdfFile(filePath, fileHeader, fileContent, imageFiles);
                 Pdf pdf = new Pdf();
                 pdf.Name = filePath;
                 pdf.OperationPerformed = "CREATE";
@@ -73,9 +73,9 @@ namespace Proyecto_final___PDFs_Creator___Editor.service
         public static void CreatePdfService(string filePath, string htmlContent)
         {
 
+            PdfUtils.CreatePdfFile(filePath, htmlContent);
             try
             {
-                PdfUtils.CreatePdfFile(filePath, htmlContent);
                 Pdf pdf = new Pdf();
                 pdf.Name = filePath;
                 pdf.OperationPerformed = "CREATE";
